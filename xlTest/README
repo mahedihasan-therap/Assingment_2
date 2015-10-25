@@ -1,0 +1,67 @@
+It's a data checking project.Full project done by ruby Programming.
+
+Here below see our project structure:
+
+xlTest
+   |
+   |
+   ---lib
+	|	|
+	|	|
+	|	--Main.rb
+	|	--data_type.rb
+	|
+	---test_data
+	|	|
+	|	|
+	|	--module_1
+			|
+			|
+			--conf
+			--expected_data
+			--spreadsheet1.ods
+	|	--module_2
+	|	--module_3
+	---test_report
+	|	|
+	|	|
+	|	--module_1
+	|		|
+	|		|
+	|		--(will be created report file in .html format when double run.bat file)
+	---clean_report_data.bat
+	---global_conf
+	---README
+	---run.bat
+
+
+what you colud:
+
+Step-1  :First,you put your .ods data file xlTest\test_data\module_1\ directory and open conf file with any text editor.
+		 now,source_file_name=spreadsheet1.ods change line.After = replace given file name by your file name and below 
+		 the line,start_from_line_no=2 change value 2 by in what line your data will start. :D
+		 
+		 And,save the file.
+				
+step-2  :Now open expected_data file with any text editor.Here,replace sample text by you put your data file column attribute like this
+		you should follow this format: (column_name=data_type,required,regex)
+		eg:	(#data_type, required, regex
+			#specific column constraints
+			column1=string,true,[a-zA-Z]
+
+			#data_type, required, regex
+			column2=date,true,dd-mm-yyyy
+
+			#data_type, required, regex
+			column3=number,false,[0-9])
+			
+			
+			
+How to operate:
+
+Operation-1(run project):		double click,run.bat file and then get your report in  your borwser and will get report about your .ods data file which 
+								file intest_data\module_1\ directory.
+						
+ 
+Operation-2(del report file):	double click,clean_report_data.bat file and Boom.what happen!,your report file 
+								(report.html) vanished.
